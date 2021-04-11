@@ -1,0 +1,109 @@
+
+<section class="home mt-5">
+
+<div class="glider-contain estrenos mb-4">
+  <div class="glider">
+      {{#each estrenos}}
+      <div class="slide">
+        <img src="{{image}}" alt="">
+        <div class="info">
+          <h1 style="color: white;">Premiere:</h1>
+          <h2>{{product}}</h2>
+          <a class="btn btn-success btn-lg p-2" href="/tienda/estrenos">More premieres</a>
+        </div>
+      </div>
+      {{/each}}
+  </div>
+
+  <button style="top: 250px;" aria-label="Previous" class=" glider-prev"><i class="fas fa-chevron-left"></i></button>
+  <button style="top: 250px;" aria-label="Next" class=" glider-next"><i class="fas fa-chevron-right"></i></button>
+  <div role="tablist" class="dots"></div>
+</div>
+
+
+<div class="glider-contain mt-5">
+  <h2 style="color: white; font-size: 45px;">Sales</h2>
+  <div class="glider2">
+      {{#each ofertas}}
+      <div class="slide2">
+        <img src="{{image}}" alt="">
+        <div class="info2">
+          <h2>{{product}}</h2>
+          <a class="btn btn-success btn-lg p-2" href="/tienda/producto/{{_id}}">${{newprice}}</a>
+        </div>
+      </div>
+      {{/each}}
+      <div class="slide2">
+        <img src="/images/games.jpg" alt="">
+        <div class="mas">
+          <h2>Explore more offers</h2>
+          <a class="btn btn-primary btn-lg p-2" href="/tienda/ofertas">More offers</a>
+        </div>
+      </div>
+  </div>
+
+  <button aria-label="Previous" class="btn btn-outline-info glider-prev2"><i class="fas fa-chevron-left"></i></button>
+  <button aria-label="Next" class="btn btn-outline-info glider-next2"><i class="fas fa-chevron-right"></i></button>
+  <div role="tablist" class="dots2"></div>
+</div>
+
+<div class="glider-contain mt-5 mb-3">
+  <h2 style="color: white; font-size: 45px;">News</h2>
+  <div class="glider">
+      {{#each noticias}}
+      <div class="slide">
+        <img src="{{image}}" alt="">
+        <div class="info noticiaaas" style="">
+          <h1 style="color: white;">{{titulo}}</h1>
+          <h4 style="font-size: 24px; color: #fff;">{{resumen}}</h4>
+          <a class="btn btn-outline-primary btn-lg p-2" href="/tienda/noticia/{{_id}}">Read more</a>
+        </div>
+      </div>
+      {{/each}}
+  </div>
+
+  <button aria-label="Previous" style="top: 270px;" class="btn btn-outline-info glider-prev"><i class="fas fa-chevron-left"></i></button>
+  <button aria-label="Next" style="top: 270px;" class="btn btn-outline-info glider-next"><i class="fas fa-chevron-right"></i></button>
+  <div role="tablist" class="dots2"></div>
+</div>
+
+<div class="container mt-5" align="center">
+  <div class="card recomendations">
+    <div class="row">
+      <div class="col-6 align-center">
+        <h1 class="mt-2" style="text-align: center; color: #fff;">
+          Universe Games
+        </h1>
+        <img src="/images/present.jpg" alt="" style="width: 290px; border-radius: 7px;">
+      </div>
+      <div class="col-4">
+        <p style="text-align: justify;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci veritatis, esse laborum, vero recusandae odit, doloremque deserunt veniam dolorem autem harum obcaecati aspernatur ut consequatur ab nesciunt. Veniam, neque dicta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe nihil fugit, molestiae ea doloremque nobis nesciunt esse. Ducimus libero dolorem rerum delectus saepe! Debitis ex sunt vero vitae! Doloribus, voluptas.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5" align="center">
+  <div class="card recomendations">
+    <div class="row">
+      <div class="col-6 p-4">
+        <p style="text-align: justify; margin-left: 35px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci veritatis, esse laborum, vero recusandae odit, doloremque deserunt veniam dolorem autem harum obcaecati aspernatur ut consequatur ab nesciunt. Veniam, neque dicta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe nihil fugit, molestiae ea doloremque nobis nesciunt esse. Ducimus libero dolorem rerum delectus saepe! Debitis ex sunt vero vitae! Doloribus, voluptas.</p>
+      </div>
+      <div class="col-4">
+        <h1 class="mt-2" style="text-align: center; color: #fff;">
+          Steam keys
+        </h1>
+        <img src="/images/steam.jpg" alt="" style="width: 290px; border-radius: 7px;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br><br>
+
+{{>footer}}
+
+</section>
+
+
+

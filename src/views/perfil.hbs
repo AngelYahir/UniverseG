@@ -1,0 +1,19 @@
+<section>
+    <div class="container p-4 mt-4">
+        <div class="row">
+            {{#if admin}}
+                {{>perfiles/mAdmin}}
+            {{else if employee}}
+                {{>perfiles/mEmployee}}
+            {{else if editor}}
+                {{>perfiles/mEditor}}
+            {{else}}
+                {{>perfiles/mUsr}}
+            {{/if}}
+
+            {{>perfiles/usrInfo}}
+        </div>
+    </div>
+</section>
+
+{{>footer}}

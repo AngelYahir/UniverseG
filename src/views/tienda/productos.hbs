@@ -1,0 +1,28 @@
+<section class="mt-5">
+    <div class="row" style="items-align: right;">
+    <form action="/buscar" method="POST">
+	    <div class="input-group">
+		<div class="form-outline">
+		    <input type="search" id="form1" class="form-control bg-dark" placeholder="Search" name="search">
+		</div>
+		<button type="submit" class="btn btn-outline-info">
+		    <i class="fas fa-search"></i>
+		</button>
+	    </div>
+    </form>
+      
+    </div>
+    <hr color="#787A7B">
+    <div class="container d-flex justify-content-center mt-5">
+        <div class="row">
+            {{#each producto}}
+            <div class="col md-3 p-3 ">
+                <div class="producto">
+                    <a href="/tienda/producto/{{_id}}"><img src="{{image}}" alt="" style="max-width: 200px; border-radius: 3px;"></a>
+                    <p style="text-align: left;">{{product}} | {{developer}}</p>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>

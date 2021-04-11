@@ -1,0 +1,18 @@
+<section class="inicio-sesion">
+  <div class="container-login">
+    <div class="registro-cont">
+      <h3 class="titleregistro">Sign Up</h3>
+      <form class="login-form" method="POST" action="registro">
+	      <input placeholder="Name(s)" class="inputregistro" type="text" name="name" id="name" value="{{name}}"/>
+	      <input placeholder="Lastname(s)" class="inputregistro" type="text" name="lastname" id="lastname" value="{{lastname}}"/>
+	      <input placeholder="Email" class="inputregistro" type="email" name="email" id="email" value="{{email}}"/>
+	      <input placeholder="Password" class="inputregistro" type="password" name="password" id="password"/>
+	      <input placeholder="Confirm password" class="inputregistro" type="password" name="confirm_password" id="confirm_password"/>
+	      <input type="submit" class="bton" value="SingUp">
+      </form>
+      <p>Do you already have an account? <span><a class="registrol" href="inicio">Login here</a></span></p>
+    </div> 
+  </div>
+</section>
+
+{{>footer}}

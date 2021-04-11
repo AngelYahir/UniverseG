@@ -1,0 +1,281 @@
+<section>
+    <div class="container mt-4">
+        <div class="card text-white" style="background-color: #202020;">
+            <div class="card-body mt-4">
+                <div class="row mt-4" >
+                    <div class="col" >
+                        <div class="glider-contain estrenos mb-4" style="max-width: 850px;">
+                            <div class="glider">
+                                <div class="slide">
+                                    <img src="{{producto.image}}" alt="">
+                                </div>
+                                <div class="slide">
+                                    <iframe width="100%" height="100%" src="{{producto.trailer}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button style="top: 225px; left: 50px" aria-label="Previous" class=" glider-prev"><i class="fas fa-chevron-left"></i></button>
+                        <button style="top: 225px; right: 50px" aria-label="Next" class=" glider-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+	        <div class="row"  align="center">
+		        <div class="col">
+		            <div class="cont">
+                        <div class="name pro" style="width: 220px;  border-radius: 4px; align-content: center; opacity: 0.6;" align="center">
+                            <h1 class="align-middle p-4" style="">{{producto.product}}</h1>
+                        </div>
+                    </div>
+		        </div>
+		        <div class="col-6">
+		            <p style="text-align: justify;">{{producto.description}}</p>
+		        </div>
+		        <div class="col">
+                    <label for="" class="control-label">${{#if oferta}} {{producto.newprice}} {{else}} {{producto.price}} {{/if}}</label><br>
+		            <a class="btn btn-info" style="border-radius: 4px; width: 150px; height: 40px;" data-toggle="modal" data-target="#mymodal" > <span> Purchase </span> </a>
+		        </div>
+	        </div>
+
+            <div class="mas mt-4">
+               <div id="accordion" class="text-white" align="center">
+                    <div class="card text-white">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-outline-info btn-block" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Description</button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show p-4" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body p-4">
+                                <div class="form-group ">
+                                    <textarea name="description" class="form-control" disabled style="border: 0; background-color: #202020; color: #9E9E9E; text-align:justify;" rows="26">{{producto.fulldesc}} </textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="accordion" class="text-white" align="center">
+                    <div class="card text-white">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-outline-info btn-block" data-toggle="collapse" data-target="#collapsetwo" aria-expanded="true" aria-controls="collapseOne"> Specifications  </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapsetwo" class="collapse show p-4" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body p-4">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <h1 class="h4">Minimum</h1>
+                                            <hr style="background-color: blueviolet;">
+                                            <div class="form-group mb-3">
+                                                <label for="" class="control-label">Operating system</label>
+                                                <h4 style="font-size: 18px; color: #9E9E9E;">{{producto.espmin.mos}}</h4>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label for="" class="control-label">Processor</label>
+                                                <h4 style="font-size: 18px; color: #9E9E9E;">{{producto.espmin.mproc}}</h4>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label for="" class="control-label">GPU</label>
+                                                <h4 style="font-size: 18px; color: #9E9E9E;">{{producto.espmin.mgpu}}</h4>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label for="" class="control-label">Memory RAM</label>
+                                                <h4 style="font-size: 18px; color: #9E9E9E;">{{producto.espmin.mram}}</h4>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label for="" class="control-label">Storage</label>
+                                                <h4 style="font-size: 18px; color: #9E9E9E;">{{producto.espmin.mstorage}}</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <h1 class="h4">Recommended</h1>
+                                            <hr style="border-color: blueviolet;">
+                                            <div class="form-group mb-3">
+                                                <label for="" class="control-label">Operating system</label>
+                                                <h4 style="font-size: 18px; color: #9E9E9E;">{{producto.esprec.ros}}</h4>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label for="" class="control-label">Processor</label>
+                                                <h4 style="font-size: 18px; color: #9E9E9E;">{{producto.esprec.rproc}}</h4>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label for="" class="control-label">GPU</label>
+                                                <h4 style="font-size: 18px; color: #9E9E9E;">{{producto.esprec.rgpu}}</h4>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label for="" class="control-label">Memory RAM</label>
+                                                <h4 style="font-size: 18px; color: #9E9E9E;">{{producto.esprec.rram}}</h4>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label for="" class="control-label">Storage</label>
+                                                <h4 style="font-size: 18px; color: #9E9E9E;">{{producto.esprec.rstorage}}</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col"></div>
+                                    <div class="col-6">
+                                        <label for="" class="control-label">Languages</label>
+                                        <h4 style="font-size: 18px; color: #9E9E9E;">{{producto.lang}}</h4>
+                                    </div>
+                                    <div class="col"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="accordion" class="text-white" align="center">
+                    <div class="card text-white">
+                        <div class="card-header" id="headingOne">
+                            <h5>
+                                <button class="btn btn-outline-info btn-block" data-toggle="collapse" data-target="#collapsethree" aria-expanded="true" aria-controls="collapsethree"> Reviews</button>
+                            </h5>
+                        </div>
+                        <div id="collapsethree" class="collapse show p-4" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body p-4">
+                                <div class="row">
+                                    <div class="col">
+                                        <img src="/images/raiting/{{#if m}}mighty.png{{else if s}}strong.png{{else if f}}fair.png{{else if w}}weak.png{{/if}}" alt="" class="raiting" style="height: 150px;">
+                                        <br>
+                                        <label for="" class="mt-5 control-label">OpenCritic Rating</label>
+                                    </div>
+                                    <div class="col">
+                                        <div class="rings">
+                                            <div class="percent1">
+                                                <svg class="cir">
+                                                    <circle cx="70" cy="70" r="70"></circle>
+                                                    <circle cx="70" cy="70" r="70" style="stroke-dashoffset: calc(440 - (440 * {{producto.review.recomendation}}) / 100);stroke: #8C30F5;animation: percent 1.5s linear;animation-delay: 1s;"></circle>
+                                                </svg>
+                                                <div class="number">
+                                                    <h2 class="num">{{producto.review.recomendation}}<span class="snum">%</span></h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <label for="" class="control-label" style="margin-right: 20px;">Top Critic Average</label>
+                                    </div>
+                                    <div class="col">
+                                        <div class="rings">
+                                            <div class="percent1">
+                                                <svg class="cir">
+                                                    <circle cx="70" cy="70" r="70"></circle>
+                                                    <circle cx="70" cy="70" r="70" style="stroke-dashoffset: calc(440 - (440 * {{producto.review.average}}) / 100);stroke: #8C30F5;animation: percent 1.5s linear;animation-delay: 1s;"></circle>
+                                                </svg>
+                                                <div class="number">
+                                                    <h2 class="num">{{producto.review.average}}</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <label for="" class="control-label" style="margin-right: 20px;" >Critics Recommend</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col"></div>
+                                    <div class="col"></div>
+                                    <div class="col-6" align="right">
+                                        <a href="{{producto.review.urloc}}" target="_blank" style="color: #9E9E9E; text-align: right;">Full review at Open Critics <span><i class="fas fa-link"></i></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="accordion" class="text-white" align="center">
+                    <div class="card text-white">
+                        <div class="card-header" id="headingOne">
+                            <h5>
+                                <button class="btn btn-outline-info btn-block" data-toggle="collapse" data-target="#collapsefour" aria-expanded="true" aria-controls="collapsefour"> More details</button>
+                            </h5>
+                        </div>
+                        <div id="collapsefour" class="collapse show p-4" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body p-4">
+                               <div class="row mb-3">
+                                   <div class="col">
+                                        <div class="form-group mb-3">
+                                            <label for="" class="control-label">Developer</label>
+                                            <h4 style="font-size: 18px; color: #9E9E9E;">{{producto.developer}}</h4>
+                                        </div>
+                                   </div>
+                                   <div class="col">
+                                        <div class="form-group mb-3">
+                                            <label for="" class="control-label">Publisher</label>
+                                            <h4 style="font-size: 18px; color: #9E9E9E;">{{producto.editora}}</h4>
+                                        </div>
+                                   </div>
+                                   <div class="col">
+                                        <div class="form-group mb-3">
+                                            <label for="" class="control-label">Platform</label>
+                                            <h4 style="font-size: 18px;color:#fff;">{{#if windows}}<i class="fab fa-windows"></i>{{else if linux}}<i class="fab fa-linux"></i>{{else if mac}}<i class="fab fa-apple"></i>{{/if}}</h4>
+                                        </div>
+                                   </div>
+                               </div>
+                               <div class="row">
+                                   <div class="col">
+                                        <div class="form-group mb-3">
+                                            <label for="" class="control-label">Tags</label>
+                                            <h4 style="font-size: 18px; color: #9E9E9E;">{{producto.genre}}</h4>
+                                        </div>
+                                   </div>
+                                   <div class="col">
+                                        <div class="form-group mb-3">
+                                            <label for="" class="control-label">ESRB classification</label>
+                                            <h4 style="font-size: 18px; color: #9E9E9E;">{{producto.esrb}}</h4>
+                                        </div>
+                                   </div>
+                                   <div class="col"></div>
+                               </div>
+                               <div class="row">
+                                   <div class="col"></div>
+                                   <div class="col-6">
+                                       <a href="https://www.esrb.org/ratings-guide/es/" target="_blank"><img src="/images/esrb/{{#if e}}e.png{{else if e10}}e10.svg{{else if teen}}t.svg{{else if mature}}m.svg{{else if  adults}}ao.png{{else if rp}}rp.png{{/if}}" alt="" style="max-width: 180px;"></a>
+                                   </div>
+                                   <div class="col"></div>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col-6">
+                            <h4 style="font-size: 13px; color: #9E9E9E; text-align: center;">{{producto.developer}}®, {{producto.product}}®, {{producto.product}}® are registered trademarks of {{producto.editora}} S.A. © {{producto.editora}} S.A. All rights reserved. All other copyrights and trademarks are the property of their respective owners.</h4>
+                        </div>
+                        <div class="col">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal-->
+        <div class="modal modal-container" id="mymodal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content text-white bg-dark">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Payment method</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="paypal-button-container"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+</section>
+

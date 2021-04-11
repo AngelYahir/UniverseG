@@ -1,0 +1,39 @@
+<section>
+  <div class="container p-4 mt-4 md-8">
+    <div class="row">
+        {{#if pass3.admin}}
+            {{>perfiles/mAdmin}}
+        {{else if pass3.employee}}
+            {{>perfiles/mEmployee}}
+        {{else if pass3.editor}}
+            {{>perfiles/meditor}}
+        {{/if}}
+      <div class="md-8" style="width: 700px;">
+        <table class="table table-dark table-striped">
+          <thead>
+            <tr>
+              <th scope="col">News</th>
+              <th scope="col">Editor</th>
+              <th scope="col">View</th>
+              <th scope="col">Update</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each noticias}}
+            <tr>
+              <th scope="row" style="max-width: 300px;">{{titulo}}</th>
+              <td>{{editor}}</td>
+              <td> <a class="btn btn-outline-info" href="/tienda/noticia/{{_id}}"><i class="fas fa-external-link-alt"></i></i></a></td>
+              <td> <a class="btn btn-outline-primary" href="/edit/noticia/{{_id}}"><i class="fas fa-pen"></i></a></td>
+              <td> <a class="btn btn-outline-danger" href="/delet/noticia/{{_id}}"><i class="fas fa-trash"></i></a></td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{>footer}}

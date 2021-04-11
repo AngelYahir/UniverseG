@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@500&display=swap');
+
+.contenedor
+{
+    max-width: 1250px;
+    margin: auto;
+    padding: 0px 0;
+}
+
+.barranav .contenedor
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.barranav
+{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    padding: 25px 0;
+    transition: all 0.3s ease;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.stick
+{
+    padding: 10px 0;
+    background-color: #2A2A2A;
+}
+
+.barranav .logotipo .nombre_tienda
+{
+    color:#fff;
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: 'Advent Pro', sans-serif;
+}
+
+.barranav .opciones
+{
+    display: inline-flex;
+}
+
+.opciones li
+{
+    list-style: none;
+}
+
+.opciones li a
+{
+    color:#fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.opciones li a:hover
+{
+    color:  #750BE8;
+}
+
+.opciones li ul
+{
+    display: none;
+    position:absolute;
+    min-width:140px;
+}
+
+.opciones li ul li
+{
+    position:absolute;
+}
+
+
+.opciones li:hover > ul
+{
+    display: block;
+}
+
+.navII:hover
+{
+    color:  #750BE8;
+}
+
+.icono
+{
+    color:#fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    margin-right: 30px;
+}
+
+.icono .btn-cerrar
+{
+    position: absolute;
+    text-align: center;
+}
+
+.icono .btn-menu
+{
+    right: 30px;
+}
+
+.boton-perfil
+{
+    border: 1px solid #750BE8;
+    color: #750BE8;
+    padding: 7px;
+}
+
+.boton-perfil:hover
+{
+    color: #fff;
+    border: 3px solid #750BE8;
+}
+
+@media (max-width: 860px)
+{
+    .icono
+    {
+        display: block;
+    }
+
+    .barranav .opciones
+    {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        width: 100%;
+        max-width: 400px;
+        background: #222;
+        display: block;
+        padding: 40px 0;
+        text-align: center;
+        transition: all o,3s ease;
+    }
+
+    .barranav .opciones.active
+    {
+        left: 0%;
+    }
+
+    .icono.desac
+    {
+        display: none;
+    }
+
+    .barranav .opciones li
+    {
+        margin-top: 40px;
+    }
+
+    .barranav .opciones li a
+    {
+        font-size: 23px;
+    }
+}

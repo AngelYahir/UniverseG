@@ -1,0 +1,23 @@
+<section>
+    <div class="container mt-4">
+        <div class="card text-white" style="background-color: #202020;">
+            <div class="card-body mt-4">
+                <h1 style="text-align: center;">{{nota.titulo}}</h1>
+                <div class="row">
+                    <img src="{{nota.image}}" alt="" style="max-width: 998px;">
+                </div>
+                <div class="row">
+                    <h1 style="text-align: center;">{{nota.tema}} </h1>
+                </div>
+                <div class="form-group p-4">
+                    <textarea name="" id="" rows="16" disabled style="border: 0; background-color: #202020; color: #9E9E9E; text-align:justify; width: 910px;">{{nota.contenido}}</textarea>
+                </div>
+            </div>
+            <div class="card-footer">
+                <p style="color: #9E9E9E;" >Editor::   {{nota.editor}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{>footer}}

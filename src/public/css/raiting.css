@@ -1,0 +1,48 @@
+
+.percent1, .cir, circle {
+  width: 200px;
+  height: 200px;
+}
+
+circle {
+  position: absolute;
+  fill: none;
+  stroke-width: 10;
+  transform: translate(10px, 10px);
+  stroke-dasharray: 440;
+  stroke-linecap: round;
+}
+
+circle:nth-child(1) {
+  stroke-dashoffset: 0;
+  stroke: #424242;
+}
+
+
+.number {
+  position: relative;
+  bottom: 155px;
+  left: -20px;
+  color: #fff;
+}
+
+.num {
+  font-size: 48px;
+}
+
+.snum {
+  font-size: 24px;
+  opacity: .7;
+}
+
+.percent1 .snum {
+  color: #8C30F5;
+}
+
+
+@keyframes percent {
+  0% {
+    stroke-dashoffset: 0;
+    stroke-width: 0;
+  }
+}

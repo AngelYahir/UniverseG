@@ -1,0 +1,26 @@
+<nav class="barranav">
+    <div class="contenedor">
+        <div class="logotipo"><a class="nombre_tienda" href="/">Universe Games</a></div>
+        <ul class="opciones">
+            <div class="icono btn-cerrar">
+                <i class="fas navII fa-times"></i>
+            </div>
+            <li><a href="/">Home</a></li>
+            <li><a href="/tienda/productos">Shop</a></li>
+            <li><a href="/tienda/noticias">News</a></li>
+            {{#if usuario}}
+            <li><a href="/perfil" class="boton-perfil">{{usuario.name}} - {{usuario.lastname}}</a>
+                <ul>
+                    <li><a class="opcion" href="/salir">Logout</a></li>
+                </ul>
+            </li>
+            {{else}}            
+            <li><a href="/inicio">Login</a></li>
+            {{/if}}
+        </ul>
+        <div class="icono btn-menu">
+            <i class="fas navII fa-bars"></i>
+        </div>
+    </div>
+</nav>
+

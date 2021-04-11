@@ -1,0 +1,151 @@
+<section>
+    <div class="conntainer p-4 mt-4">
+        <div class="row">
+            {{>perfiles/mAdmin}}
+            <div class="tablas mb-8" style="width: 700px;">
+                <div class="lbl-menu">
+                    <label for="tabla1">All</label>
+                    <label for="tabla2">Admins</label>
+                    <label for="tabla3">Employees</label>
+                    <button data-toggle="modal" data-target="#mymodal"  class="btn btn-outline-primary"><i class="fas fa-user-plus"></i></button>
+                </div>
+        
+                <div class="content">
+           
+                    <input type="radio" name="radio" id="tabla1" checked>
+                    <div class="tab1">
+                        <table class="table table-dark table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">id</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Lastname</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {{#each usuarios}}
+                                <tr>
+                                    <th scope="row">{{_id}}</th>
+                                    <td>{{name}}</td>
+                                    <td>{{lastname}}</td>
+                                    <td>{{email}}</td>
+                                    <td> <a class="btn btn-danger" href="/list/empleados/{{_id}}"><i class="fas fa-trash"></i></a></td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>  
+                    </div>
+
+                    <input type="radio" name="radio" id="tabla2" checked>
+                    <div class="tab2">
+                        <table class="table table-dark table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">id</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Lastname</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {{#each admins}}
+                                <tr>
+                                    <th scope="row">{{_id}}</th>
+                                    <td>{{name}}</td>
+                                    <td>{{lastname}}</td>
+                                    <td>{{email}}</td>
+                                    <td> <a class="btn btn-danger" href="/list/empleados/{{_id}}"><i class="fas fa-trash"></i></a></td>
+                                </tr>
+                            {{/each}}
+                            </tbody>
+                        </table>  
+                    </div>                    
+
+                    <input type="radio" name="radio" id="tabla3" checked>
+                    <div class="tab3">
+                        <table class="table table-dark table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">id</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Latname</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {{#each empleados}}
+                                <tr>
+                                    <th scope="row">{{_id}}</th>
+                                    <td>{{name}}</td>
+                                    <td>{{lastname}}</td>
+                                    <td>{{email}}</td>
+                                    <td> <a class="btn btn-danger" href="/list/empleados/{{_id}}"><i class="fas fa-trash"></i></a></td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>  
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--Ventana Modal-->
+
+        <div class="modal modal-container" id="mymodal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content text-white bg-dark">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add employee</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/add/empleados" method="post">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="" class="control-label">Employee role</label>
+                                    <div class="form-group">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" name="admin" type="checkbox" value="true">
+                                            <label class="form-check-label" >Administrator</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" name="employee" type="checkbox" value="true">
+                                            <label class="form-check-label" >Employee</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" name="editor" type="checkbox" value="true">
+                                            <label class="form-check-label" >Editor</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <input type="email" name="email" id="" placeholder="Correo electronico">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col md-8">
+                                    <button type="button" class="btn btn-outline-warning" id="close" data-dismiss="modal">Cancel</button>
+                                    <input type="submit" class="btn btn-outline-info" value="Accept">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{{>footer}}

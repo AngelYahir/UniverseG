@@ -1,0 +1,64 @@
+<section>
+    <div class="container p-4 mt-4">
+        <div class="row">
+            {{#if admin}}
+                {{>perfiles/mAdmin}}
+            {{else if employee}}
+                {{>perfiles/mEmployee}}
+            {{else if editor}}
+                {{>perfiles/mEditor}}
+            {{else}}
+                {{>perfiles/mUsr}}
+            {{/if}}
+
+
+        <div class="md-8 mx-auto dark">
+          <div class="card text-center text-white bg-dark mb-3">
+            <div class="card-header">
+              <h1 class="h4">
+                {{#if admin}}Update administrator profile {{else if employee}} Update employee profile {{else if editor}}Update editor profile {{else}} Update user profile {{/if}}
+              </h1>
+            </div>
+            <img class="rounded-circle mx-auto d-block logo " src="/images/profile.png" alt="Logo">
+            <div class="card-body">
+                <form action="/update/usuario" method="POST">
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label for="disabledTextInput" class="form-label">Name</label>
+                            <input type="text" name="name" class="form-control" id="disabledTextInput" value="{{#if admin}} {{admin.name}} {{else if employee}} {{employee.name}} {{else if editor}} {{editor.name}} {{else}} {{usuario.name}} {{/if}}">
+                        </div>
+                        <div class="col">
+                            <label for="disabledTextInput" class="form-label">Latname</label>
+                            <input type="text" name="lastname" class="form-control" id="disabledTextInput" value="{{#if admin}} {{admin.lastname}} {{else if employee}} {{employee.lastname}} {{else if editor}} {{editor.lastname}} {{else}} {{usuario.lastname}} {{/if}}">
+                        </div>
+                        <div class="col">
+                            <label for="disabledTextInput" class="form-label">Email</label>
+                            <input type="email" name="email" class="form-control" id="disabledTextInput" value="{{#if admin}} {{admin.email}} {{else if employee}} {{employee.email}} {{else if editor}} {{editor.email}} {{else}} {{usuario.email}} {{/if}}">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <label for="disabledTextInput" class="form-label">Actual password</label>
+                            <input type="password" name="actualpass" class="form-control" id="disabledTextInput">
+                        </div>
+                        <div class="col-6">
+                            <label for="disabledTextInput" class="form-label">New password</label>
+                            <input type="password" name="password" class="form-control" id="disabledTextInput">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col">
+                            <input type="submit" value="Update" class="btn btn-outline-info">
+                        </div>
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+
+    </div>
+</section>
+
+{{>footer}}

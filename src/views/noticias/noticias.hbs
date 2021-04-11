@@ -1,0 +1,40 @@
+<section class="mt-5">
+    <div class="row" style="items-align: right;">
+    <form action="/buscar/noticia" method="POST">
+	    <div class="input-group">
+		<div class="form-outline">
+		    <input type="search" id="form1" class="form-control bg-dark" placeholder="Search" name="search">
+		</div>
+		<button type="submit" class="btn btn-outline-info">
+		    <i class="fas fa-search"></i>
+		</button>
+	    </div>
+    </form>
+      
+    </div>
+    <hr color="#787A7B">
+    <div class="container d-flex justify-content-center mt-5">
+        <div class="row">
+            {{#each noticias}}
+            <div class="card mb-3" style="width: 1050px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="{{image}}" style="max-width: 450px;">
+                    </div>
+                    <div class="col-md-8" style="width: 650px;">
+                        <div class="card-body" style="width: 650px;">
+                            <div class="contnot" style="margin-left: 100px;">
+                                <h5 class="card-title text-white">{{titulo}}</h5>
+                                <p class="card-text" style="text-align: left; color: #9E9E9E;">{{resumen}}</p>
+                                <a href="/tienda/noticia/{{_id}}" class="btn btn-outline-info">Leer mas</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section> 
+
+{{>footer}}

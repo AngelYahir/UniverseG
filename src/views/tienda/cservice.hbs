@@ -1,0 +1,43 @@
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h1 class="h4 text-white">
+                Customer Service
+            </h1>
+        </div>
+        <div class="card-body">
+            <form action="/customer/send/mail" method="post">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="" class="control-label">Name</label>
+                            <input type="text" name="name" class="form-control" value="{{usr.name}}{{usr.lastname}}">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="" class="control-label">Email</label>
+                            <input type="email" name="email" class="form-control" value="{{usr.email}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="control-label">Issue</label>
+                    <input type="text" name="asunto" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="" class="control-label">Specify your problem</label>
+                    <textarea name="mensaje" id="" rows="5" class="form-control"></textarea>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col-6">
+                        <input type="submit" value="Send" class="btn btn-outline-info btn-block">
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

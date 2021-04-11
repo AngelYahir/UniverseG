@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+.inicio-sesion
+{
+  font-family: 'Advent Pro', sans-serif;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
+
+.container-login
+{
+  width: 100%;
+  height: 85vh;
+  position: relative;
+  background: #121212;  
+  z-index: 0;
+}
+
+.login 
+{
+  width: 55%;
+  height: 100%;
+}
+
+.login::before
+{
+  font-family: 'Advent Pro', sans-serif;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85vh;
+  z-index: -1;
+  position: absolute;
+  opacity: 0.65;
+  background: url("/images/login-banner1.jpg") no-repeat center center/cover;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.registro-cont 
+{
+  width: 55%;
+  height: 100%;
+}
+
+.registro-cont::before
+{
+  font-family: 'Advent Pro', sans-serif;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85vh;
+  z-index: -1;
+  position: absolute;
+  opacity: 0.65;
+  background: url("/images/login-banner2.jpg") no-repeat center center/cover;
+ clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+}
+
+.title 
+{
+  font-family: 'Advent Pro', sans-serif;
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  color: #fff;
+}
+
+.titleregistro 
+{
+  font-family: 'Advent Pro', sans-serif;
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 0.2rem;
+  color: #fff;
+}
+  
+.login-form 
+{
+  font-family: 'Advent Pro', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+  
+.login-form .input 
+{
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 1.3rem;
+  padding: 1.8rem 0.3rem 0.5rem 0.7rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: #ffff;
+  color: #8C30F5;
+  min-width: 300px;
+  margin-bottom: 1.5rem;
+}
+
+.login-form .inputregistro 
+{
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 1.3rem;
+  padding: 0.7rem 4rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: #ffff;
+  color: #8C30F5;
+  min-width: 300px;
+  margin-bottom: 1.5rem;
+}
+  
+.emaillabel 
+{
+  position: relative;
+  font-family: 'Advent Pro', sans-serif;
+}
+  
+.emaillabel::before 
+{
+  font-family: 'Advent Pro', sans-serif;
+  content: "Email";
+  position: absolute;
+  color: #8C30F5;
+  width: 100%;
+  font-size: 0.8rem;
+  padding: 0.5rem 0.3rem 0rem 0.7rem;
+  letter-spacing: 0.2rem;
+}
+  
+.passwordlabel::before 
+{
+  font-family: 'Advent Pro', sans-serif;
+  content: "password";
+  position: absolute;
+  color: #8C30F5;
+  width: 100%;
+  font-size: 0.8rem;
+  padding: 0.5rem 0.3rem 0rem 0.7rem;
+  letter-spacing: 0.2rem;
+}
+  
+.bton 
+{
+  font-family: 'Advent Pro', sans-serif;
+  color: #8C30F5;
+  background: #fff;
+  cursor: pointer;
+  margin-top: 1rem;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.7rem 4rem;
+  border-radius: 5px;
+  transition: 0.5s;
+  text-align: center;
+}
+  
+.bton:hover 
+{
+  transform: scale(0.9);
+  color: #fff;
+  background-color: #8C30F5;
+}
+  
+p 
+{
+  font-family: 'Advent Pro', sans-serif;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #fff;
+}
+  
+p span .registrol 
+{
+  font-family: 'Advent Pro', sans-serif;
+  display: inline-block;
+  color: #8C30F5;
+  background: #fff;
+  margin-left: 0.5rem;
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+  
+p span .registrol:hover 
+{
+  transform: scale(0.9);
+  color: #fff;
+  background-color: #8C30F5;
+}

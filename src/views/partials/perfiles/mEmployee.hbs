@@ -1,0 +1,24 @@
+      <div class="menuPerfil col md-4">
+        <div class="card text-white bg-dark mb-3">
+          <div class="card-header text-center">
+            <h1 class="h4">Options</h1>
+          </div>
+          <div class="card-body p-4">
+            <div class="row mb-3">
+              <a href="/perfil" class="btn btn-block {{#if employee}} btn-info disabled {{else}} btn-outline-info{{/if}}">Profile</a>
+            </div>
+            <div class="row mb-3">
+              <a href="/list/productos" class="btn btn-block {{#if productoz}} btn-info disabled {{else}} btn-outline-info{{/if}}">Products</a>
+            </div>
+            <div class="row mb-3">
+              <a href="/add/productos" class="btn btn-block {{#if pass1}} btn-info disabled {{else}} btn-outline-info{{/if}}">Add products</a>
+            </div>
+            <div class="row mb-5">
+              <a href="/update/usuario" class="btn btn-block {{#if empleados}} btn-info disabled {{else}} btn-outline-info{{/if}}">Edit profile</a>
+            </div>
+            <div class="row mt-5">
+              <a href="/salir" class="btn btn-outline-danger btn-block">LogOut</a>
+            </div>
+          </div>
+        </div>
+      </div>

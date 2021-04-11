@@ -1,0 +1,28 @@
+      <fieldset disabled>
+        <div class="md-8 mx-auto dark">
+          <div class="card text-center text-white bg-dark mb-3">
+            <div class="card-header">
+              <h1 class="h4">
+                {{#if admin}} Administrator profile {{else if employee}} Employee profile {{else if editor}}Editor profile {{else}} User profile {{/if}}
+              </h1>
+            </div>
+            <img class="rounded-circle mx-auto d-block logo " src="/images/profile.png" alt="Logo">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <label for="disabledTextInput" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="disabledTextInput" placeholder="{{#if admin}} {{admin.name}} {{else if employee}} {{employee.name}} {{else if editor}} {{editor.name}} {{else}} {{usuario.name}} {{/if}}">
+                </div>
+                <div class="col">
+                  <label for="disabledTextInput" class="form-label">Lastname</label>
+                  <input type="text" class="form-control" id="disabledTextInput" placeholder="{{#if admin}} {{admin.lastname}} {{else if employee}} {{employee.lastname}} {{else if editor}} {{editor.lastname}} {{else}} {{usuario.lastname}} {{/if}}">
+                </div>
+                <div class="col mb-3">
+                  <label for="disabledTextInput" class="form-label">Email</label>
+                  <input type="text" class="form-control" id="disabledTextInput" placeholder="{{#if admin}} {{admin.email}} {{else if employee}} {{employee.email}} {{else if editor}} {{editor.email}} {{else}} {{usuario.email}} {{/if}}">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>

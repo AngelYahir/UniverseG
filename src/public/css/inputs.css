@@ -1,0 +1,23 @@
+.form-control, .form-control-file
+{
+    border: 0;
+    border-bottom: 1px solid #8C30F5;
+    background-color: #373A3C;
+    color: white;
+}
+
+.form-control:focus
+{
+    border: 0;
+    border-bottom: 1px solid #8C30F5;
+    background-color: #373A3C;
+    color: white;
+}
+
+.input-group-text
+{
+    background-color: #373A3C;
+    color: #8C30F5;
+    border: 0;
+    border-bottom: 1px solid #8C30F5;
+}

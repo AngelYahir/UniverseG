@@ -1,0 +1,64 @@
+
+
+.tablas{
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    margin-top:0;
+}
+
+.lbl-menu{
+    background: #35383A;
+}
+.lbl-menu label{
+    display: inline-block;
+    padding: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 400ms ease;
+}
+.lbl-menu label:hover{
+    background: #1e1f20;
+}
+.content{
+    position: relative;
+}
+.content div{
+    position: absolute;
+    line-height: 1.8;
+    transition: all 600ms ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.90);
+    background: #121212;
+}
+#tabla1,#tabla2,#tabla3{
+    display: none;
+}
+#tabla1:checked ~ .tab1,
+#tabla2:checked ~ .tab2,
+#tabla3:checked ~ .tab3
+{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+.content div:after{
+    position: absolute;
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid #1e1f20;
+    bottom: 100%;
+    left: 28px;
+}
+.content .tab2:after{
+    left: 122px;
+}
+.content .tab3:after{
+    left: 210px;
+}
+.content .tab4:after{
+    left: 303px;
+}

@@ -1,0 +1,427 @@
+<section>
+    <div class="container p-4 mt-4">
+        <div class="row">
+            {{#if pass1.admin}}
+                {{>perfiles/mAdmin}}
+            {{else}}
+                {{>perfiles/mEmployee}}
+            {{/if}}
+            <div class="card text-white bg-dark md-8" style="width: 700px;">
+                <div class="card-header text-center">
+                    <h1 class="h4">Add product</h1>
+                </div>
+                <div class="card-body">
+                    <form action="/add/productos" method="POST" enctype="multipart/form-data">
+                        <div id="acordion">
+                            <div class="card-header">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-outline-info btn-block" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                        General information
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div class="collapse show" aria-labelledby="headingOne" data-parent="#acordion" id="collapse1">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label for="" class="control-label">Video Games</label>
+                                            <input type="text" class="form-control" placeholder="Nombre del videojuego" name="product" style="border: 0; border-bottom: 1px solid #8C30F5; background-color: #373A3C;">
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label class="control-label">Regular price</label>
+                                                <div class="form-group">
+                                                    <div class="input-group mb-3">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text">$</span>
+                                                        </div>
+                                                        <input type="text" name="price" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <label for="" class="control-label">Sale tags</label>
+                                            <div class="form-group">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" name="premiere" type="checkbox" value="true">
+                                                    <label class="form-check-label" >Premiere</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" name="sale" type="checkbox" value="true">
+                                                    <label class="form-check-label" >Sale</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label class="control-label">Discount </label>
+                                                <div class="form-group">
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" name="discount" class="form-control">
+                                                        <div class="input-group-append">
+                                                            <span class="input-group-text">%</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="form-group">
+                                                <label for="select" class="control-label">Genre</label>
+                                                <select name="genre[]" id="select"  class="form-control select" multiple data-multi-select-plugin>
+                                                    {{#each genero}}
+                                                    <option value="{{genero}}">{{genero}}</option>
+                                                    {{/each}}
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <label for="" class="control label">Add genre</label>
+                                            <div class="form-group">
+                                                <a data-toggle="modal" data-target="#mymodal"  class="btn btn-outline-info"><i class="fas fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label class="control-label">YouTube Trailer </label>
+                                                <div class="form-group">
+                                                    <div class="input-group mb-3">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text">URL</span>
+                                                        </div>
+                                                        <input type="text" name="trailer" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label  class="control-label">Short description</label>
+                                        <textarea name="description" class="form-control"></textarea>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group ml-3">
+                                            <label for="exampleFormControlFile1">Image</label>
+                                            <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="accordion2" class="text-white bg-dark" >
+                            <div class="card text-white bg-dark">
+                                <div class="card-header" id="heading2">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-outline-info btn-block" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2"> Details</button>
+                                    </h5>
+                                </div>
+
+                                <div id="collapse2" class="collapse show p-4" aria-labelledby="heading2" data-parent="#accordion2">
+                                    <div class="card-body p-4">
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <label for="" class="control-label">Developer</label>
+                                                <input type="text" class="form-control"  name="developer">
+                                            </div>
+                                            <div class="col">
+                                                <label for="" class="control-label">Publisher</label>
+                                                <input type="text" class="form-control"  name="editora">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="select" class="control-label">ESRB classification</label>
+                                                    <select name="esrb"  class="form-control select" >
+                                                        <option value="Todos">Everyone</option>
+                                                        <option value="Todos +10">Everyone +10</option>
+                                                        <option value="Adolescentes">Teen</option>
+                                                        <option value="Maduro +17">Mature +17</option>
+                                                        <option value="Solo Adultos +18">Adults Only +18</option>
+                                                        <option value="Sin clasificar">Rating Pending</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <label for="" class="control-label">Platform</label>
+                                                <div class="form-group">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" name="wos" type="checkbox" value="true">
+                                                        <label class="form-check-label" ><i class="fab fa-windows"></i></label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" name="wli" type="checkbox" value="true">
+                                                        <label class="form-check-label" ><i class="fab fa-linux"></i></label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" name="wapp" type="checkbox" value="true">
+                                                        <label class="form-check-label" ><i class="fab fa-apple"></i></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group ">
+                                            <label  class="control-label">Full description</label>
+                                            <textarea name="fulldesc" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="accordion3" class="text-white bg-dark" align="center">
+                            <div class="card text-white  bg-dark">
+                                <div class="card-header" id="heading3">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-outline-info btn-block" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3"> Specifications </button>
+                                    </h5>
+                                </div>
+
+                                <div id="collapse3" class="collapse show p-4" aria-labelledby="heading3" data-parent="#accordion3">
+                                    <div class="card-body p-4">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="row">
+                                                    <h1> Minimum</h1>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label">Operating system</label>
+                                                        <input type="text" class="form-control"  name="mos">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label">Processor</label>
+                                                        <input type="text" class="form-control"  name="mproc">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label">GPU</label>
+                                                        <input type="text" class="form-control"  name="mgpu">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label">Memory RAM</label>
+                                                        <input type="text" class="form-control"  name="mram">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label">Storage</label>
+                                                        <input type="text" class="form-control"  name="mstorage">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col">
+                                                <div class="row">
+                                                    <h1>Recommended</h1>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label">Operating system</label>
+                                                        <input type="text" class="form-control"  name="ros">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label">Processor</label>
+                                                        <input type="text" class="form-control"  name="rproc">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label">GPU</label>
+                                                        <input type="text" class="form-control"  name="rgpu">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label">Memory RAM</label>
+                                                        <input type="text" class="form-control"  name="rram">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label">Storage</label>
+                                                        <input type="text" class="form-control"  name="rstorage">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                        <div class="col-4">
+                                            <div class="form-group">
+                                                <label for="select" class="control-label">Language</label>
+                                                <select name="lang[]" id="select"  class="form-control select" multiple data-multi-select-plugin>
+                                                    {{#each idioma}}
+                                                    <option value="{{language}}">{{language}}</option>
+                                                    {{/each}}
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <label for="" class="control label">New Language</label>
+                                            <div class="form-group">
+                                                <a data-toggle="modal" data-target="#mymodal2"  class="btn btn-outline-info"><i class="fas fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="accordion4" class="text-white bg-dark" align="center">
+                            <div class="card text-white  bg-dark">
+                                <div class="card-header" id="heading4">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-outline-info btn-block" data-toggle="collapse" data-target="#collapse4" aria-expanded="true" aria-controls="collapse4"> Reviews</button>
+                                    </h5>
+                                </div>
+
+                                <div id="collapse4" class="collapse show p-4" aria-labelledby="heading4" data-parent="#accordion4">
+                                    <div class="card-body p-4">
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="select" class="control-label">OpenCrtic raiting</label>
+                                                    <select name="ocraiting"  class="form-control select">
+                                                        <option value="MIGHTY">MIGHTY</option>
+                                                        <option value="STRONG">STRONG</option>
+                                                        <option value="FAIR">FAIR</option>
+                                                        <option value="WEAK">WEAK</option>
+                                                    </select>
+                                                </div> 
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label class="control-label">Recomendation</label>
+                                                    <div class="form-group">
+                                                        <div class="input-group mb-3">
+                                                            <input type="text" name="recomendation" class="form-control">
+                                                            <div class="input-group-append">
+                                                                <span class="input-group-text">%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="select" class="control-label">Average</label>
+                                                    <input type="text" name="average" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Open Critic URL</label>
+                                                    <div class="form-group">
+                                                        <div class="input-group mb-3">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text">URL</span>
+                                                            </div>
+                                                            <input type="text" name="urloc" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center">
+                            <div class="form-group mt-3 ml-3" >
+                                <input type="submit" class="btn btn-outline-info" value="Add" style="width: 250px;"> 
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--Ventana Modal generos-->
+
+        <div class="modal modal-container" id="mymodal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content text-white bg-dark">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add genre</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/add/genero" method="post">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="" class="control-label">New genre</label>
+                                    <div class="form-group">
+                                        <input type="text" name="genero">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col md-8">
+                                    <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Cancel</button>
+                                    <input type="submit" class="btn btn-outline-info" value="Accept">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Ventana Modal idiomas-->
+
+        <div class="modal modal-container" id="mymodal2">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content text-white bg-dark">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add language</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/add/idioma" method="post">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="" class="control-label">New language</label>
+                                    <div class="form-group">
+                                        <input type="text" name="language">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col modal-footer">
+                                    <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Cancel</button>
+                                    <input type="submit" class="btn btn-outline-info" value="Accept">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{{>footer}}

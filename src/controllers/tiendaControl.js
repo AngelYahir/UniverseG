@@ -5,7 +5,7 @@ const noticia = require('../models/noticias');
 //Renderizar vistas de la tienda
 
 tiendaCtrl.renderTienda = async (req, res) => {
-    const producto = await productos.find().sort({ date: "desc" });
+    const producto = await productos.find().sort({ updatedAt: -1 });
     res.render('tienda/productos', {producto});
 };
 
@@ -41,7 +41,7 @@ tiendaCtrl.renderProdpage = async (req, res) => {
 
 tiendaCtrl.renderSearch = async (req, res) => {
     const search = req.body.search;
-    const producto = await productos.find({product: new RegExp(search, 'i')});
+    const producto = await productos.find({product: new RegExp(search, 'i')}).sort({ updatedAt: -1 });
 
     if(producto.length > 0) {
         res.render('tienda/productos', {producto});
@@ -52,7 +52,7 @@ tiendaCtrl.renderSearch = async (req, res) => {
 }
 
 tiendaCtrl.renderlNoticias = async (req, res) => {
-    const noticias = await noticia.find();
+    const noticias = await noticia.find().sort({ updatedAt: -1 });
     res.render('noticias/noticias', {noticias});
 }
 
@@ -64,7 +64,7 @@ tiendaCtrl.renderNoticia = async (req, res) => {
 
 tiendaCtrl.renderSearchnot = async (req, res) => {
     const search = req.body.search;
-    const noticias = await noticia.find({titulo: new RegExp(search, 'i')});
+    const noticias = await noticia.find({titulo: new RegExp(search, 'i')}).sort({ updatedAt: -1 });
 
     if(noticias.length > 0) {
         res.render('noticias/noticias', {noticias});
@@ -75,12 +75,12 @@ tiendaCtrl.renderSearchnot = async (req, res) => {
 }
 
 tiendaCtrl.renderOfertas = async (req, res) => {
-    const producto = await productos.find({sale: true}).sort({ date: "desc" });
+    const producto = await productos.find({sale: true}).sort({ updatedAt: -1 });
     res.render('tienda/productos', {producto});
 };
 
 tiendaCtrl.renderEstrenos = async (req, res) => {
-    const producto = await productos.find({premiere: true}).sort({ date: "desc" });
+    const producto = await productos.find({premiere: true}).sort({ updatedAt: -1 });
     res.render('tienda/productos', {producto});
 };
 

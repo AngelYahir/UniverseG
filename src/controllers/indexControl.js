@@ -4,10 +4,10 @@ const noticia = require('../models/noticias');
 
 //Renderiza las vistas 
 control.renderIndex = async(req, res) => {
-    const producto = await productos.find().sort({ date: "desc" }).limit(3);
-    const estrenos = await productos.find({premiere: true}).sort({ date: "desc" }).limit(4);
-    const ofertas = await productos.find({sale: true}).sort({ date: "desc" }).limit(5);
-    const noticias = await noticia.find().sort({ date: "desc" });
+    const producto = await productos.find().sort({ updatedAt: -1 }).limit(3);
+    const estrenos = await productos.find({premiere: true}).sort({ updatedAt: -1 }).limit(4);
+    const ofertas = await productos.find({sale: true}).sort({ updatedAt: -1 }).limit(5);
+    const noticias = await noticia.find().sort({ updatedAt: -1 });
 
     res.render('index', {producto, estrenos, ofertas, noticias});
 };

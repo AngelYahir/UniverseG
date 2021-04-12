@@ -79,7 +79,8 @@ adminCtrl.addProduct = async (req, res) => {
   const result = await cloudinary.v2.uploader.upload(req.file.path);
   const employee = await usuario.findOne({_id: req.user.id});
 
-  const newprice = (price*discount)/100;
+  const dis = (price*discount)/100;
+  const newprice = price - dis;
 
 
   const nuevoProducto = new productos({

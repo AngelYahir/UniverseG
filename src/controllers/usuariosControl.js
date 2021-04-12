@@ -162,7 +162,6 @@ usuarioCtrl.sendMail = async (req, res) => {
       from: '"Universe Games" <olin.rath29@ethereal.email>', // sender address,
       to: 'olin.rath29@ethereal.email',
       subject: 'Universe Games Customer Service',
-      // text: 'Hello World'
       html: contentHTML
   });
 

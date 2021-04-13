@@ -19,4 +19,14 @@ window.addEventListener('load', function(){
           next: '.glider-next2'
         }
       });
+
+      new Glider(document.querySelector('.glider3'), {
+        slidesToShow: 1,
+        dots: '.dots',
+        draggable: true,
+        arrows: {
+          prev: '.glider-prev3',
+          next: '.glider-next3'
+        }
+      });
 });

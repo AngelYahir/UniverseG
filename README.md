@@ -36,7 +36,7 @@ Install HandlebarsJs version 4.5.3 to ensure proper operation
 npm install handlebars@4.5.3
 ```
 
-Run the project (go to [localhost: 4000](http: // localhost: 4000) to view the page)
+Run the project go to [localhost: 4000](http://localhost:4000) to view the page
 
 ```bash
 npm run dev

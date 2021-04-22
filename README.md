@@ -1,80 +1,43 @@
 # Universe Games
 
----
+## Screenshots
+![Home](x)
 
-## Tecnologías utilizadas
+## Built with
 
-MongoDB
+* [MongoDB](https://www.mongodb.com/cloud) - Data base
+* [Cloudinary](https://cloudinary.com/) - Cloud images service
+* [NodeJs](https://nodejs.org/es/) - Runtime environment
 
----
-
-Base de datos 
-
-JavaScript
-
----
-
-Lenguaje de programación
-
-NodeJs
+## Installation guide
 
 ---
 
-Entorno de ejecución
-
-Handlebars
-
----
-
-Manejador de plantillas 
-
-MongoDB ATLAS
-
----
-
-Host base de datos
-
-Cloudinary
-
----
-
-Almacenamiento de imagenes
-
-Heroku
-
----
-
-Host de pagina
-
-## Guía de instalación
-
----
-
-**Instalar las siguientes dependencias con npm**
+**Install dependencies with npm**
 
 ```bash
 npm install
 ```
 
-**Instalar las siguientes dependencias de desarrollo**
+**Install the following development dependencies**
 
 ```bash
 npm install dotenv nodemon -D
 ```
 
-**Instalar la versión 4.5.3 de HandlebarsJs para asegurar el buen funcionamiento**
+**Install HandlebarsJs version 4.5.3 to ensure proper operation**
 
 ```bash
 npm install handlebars@4.5.3
 ```
 
-**Ejecutar el proyecto (ir al [localhost:4000](http://localhost:4000) para visualizar la pagina)**
+**Run the project (go to [localhost: 4000] (http: // localhost: 4000) to view the page)**
 
 ```bash
 npm run dev
 ```
 
-Agregar api keys de cloudinary como variables de entorno en tu archivo ".env" con los siguientes nombres:
+Add cloudinary api keys as environment variables in your ".env" file with the following names:
 
 ```jsx
 API_SECRET=
@@ -82,7 +45,7 @@ API_KEY=
 CLOUDNAME=
 ```
 
-Agregar uri de mongo como variable de entorno:
+Add mongo URI as environment variable:
 
 ```jsx
 MONGODB_URI= 

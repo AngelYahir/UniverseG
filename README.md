@@ -1,7 +1,7 @@
 # Universe Games
 
 ## Screenshots
-![x](screenshots/image6)
+![](screenshots/image6.png)
 
 ## Built with
 

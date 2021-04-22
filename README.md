@@ -36,7 +36,7 @@ npm install dotenv nodemon -D
 npm install handlebars@4.5.3
 ```
 
-**Run the project (go to [localhost: 4000] (http: // localhost: 4000) to view the page)**
+**Run the project (go to [localhost: 4000](http: // localhost: 4000) to view the page)**
 
 ```bash
 npm run dev

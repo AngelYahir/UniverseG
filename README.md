@@ -18,25 +18,25 @@
 
 ---
 
-**Install dependencies with npm**
+Install dependencies with npm
 
 ```bash
 npm install
 ```
 
-**Install the following development dependencies**
+Install the following development dependencies
 
 ```bash
 npm install dotenv nodemon -D
 ```
 
-**Install HandlebarsJs version 4.5.3 to ensure proper operation**
+Install HandlebarsJs version 4.5.3 to ensure proper operation
 
 ```bash
 npm install handlebars@4.5.3
 ```
 
-**Run the project (go to [localhost: 4000](http: // localhost: 4000) to view the page)**
+Run the project (go to [localhost: 4000](http: // localhost: 4000) to view the page)
 
 ```bash
 npm run dev
